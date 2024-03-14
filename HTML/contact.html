@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牙科診所 | Taiwan</title>
+
+    <!-- v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <!-- 連接CSS檔案 -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- icon掛載 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 掛載解決IE8不支援HTML5的問題 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+
+    <style>
+        body a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="clearfix">
+
+        <h1 class="float-left">
+            <a href="#"><i class="fa-solid fa-tooth icon-tooth"></i></a>
+            <!-- 標題連結首頁 -->
+            <a href="./index.html" style="color:skyblue;">牙科診所</a>
+        </h1>
+        <div class="float-left">
+            <a href="#" id="pagetop" ;>TOP</a>
+        </div>
+
+        <nav class="float-left">
+            <!-- ul>li*4>a{item} -->
+            <!-- 無序列表 -->
+            <ul class="clearfix">
+                <li class="float-left"><a href="about.html">關於我們</a></li>
+                <li class="float-left"><a href="product.html">診療項目</a></li>
+                <li class="float-left"><a href="store.html">門市資訊</a></li>
+                <li class="float-left"><a href="contact.html">預約看診</a></li>
+            </ul>
+        </nav>
+
+        <h2 class="socia-icon float-left">
+            <a href="#" target="_blank"><i class="fa-brands fa-line icon-line"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook icon-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram icon-instagram"></i></a>
+        </h2>
+
+    </header>
+
+    <!-- .breadcrumb -->
+    <div class="bg-light">
+        <div class="container">
+            <ol class="breadcrumb clearfix">
+                <li class="float-left"><a href="index.html">首頁</a></li>
+                <li class="float-left">聯絡我們</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- .container start -->
+
+
+    <!-- 
+        .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
+    <div class="container clearfix">
+        <h2 class="float-left col-12">聯絡我們</h2>
+        <div class="float-left col-3" style="background-color: lightcyan;">
+            <!-- ul.sidebar>li*3>a[href="#"]{item$} -->
+            <ul class="sidebar">
+                <li><a class="active" href="#">聯絡表單</a></li>
+                <li><a href="#">門診資訊</a></li>
+            </ul>
+        </div>
+        <div class="float-left col-6">
+            <!-- 表單 start -->
+            <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+                <!-- 姓名 start -->
+                <label for="">姓名</label>
+                <input type="text" name="name" id="name" placeholder="請輸入姓名" required>
+                <!-- 姓名 end -->
+
+                <br>
+
+                <!-- radio start 單核選 -->
+                <label for="gender">稱謂</label>
+                <input type="radio" name="gender" id="" value="男"><label for="male">先生</label>
+                <input type="radio" name="gender" id="female" value="女"><label for="female">小姐</label>
+                <!-- radio end 單核選 -->
+
+                <br>
+
+                <!-- 電話 start -->
+                <label for="">電話</label>
+                <input type="text" name="phone" id="phone" placeholder="請輸入電話" required>
+                <!-- 電話 end -->
+
+                <br>
+
+                <!-- Email start -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="請輸入email" required>
+                <!-- Email end  -->
+
+                <br>
+
+                <!-- Email start -->
+                <label for="date">預約日期</label>
+                <input type="date" name="date" id="date">
+                <!-- Email end  -->
+
+                <br>
+
+                <!-- 聯絡目的 start-->
+                <label for="purpose">預約項目</label>
+                <select name="purpose" id="purpose">
+                    <option disabled selected="true">==請選擇項目==</option>
+                    <option>人工植牙</option>
+                    <option>假牙/全瓷冠</option>
+                    <option>齒顎矯正/隱形矯正</option>
+                    <option>牙周病治療</option>
+                    <option>顯微根管治療</option>
+                    <option>活髓保存治療</option>
+                    <option>全口重建</option>
+                    <option>牙齦微整形</option>
+                    <option>口腔外科/拔智齒</option>
+                    <option>一般健保</option>
+                </select>
+                <!-- 聯絡目的 end -->
+
+                <br>
+
+                <!-- checkbox start 多核選 -->
+                <label for="">方便聯絡時間</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="morning"><label for="morning">上午</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="afternoon"><label for="afternoon">下午</label>
+                <input class="mb-2" type="checkbox" name="interest[]" id="night"><label for="night">晚上</label>
+
+                <!-- checkbox end 多核選 -->
+
+                <br>
+
+                <!-- file start -->
+                <label for="file">上傳病情圖片</label>
+                <input type="file" name="file" id="file">
+                <!-- file end -->
+
+                <br>
+
+                <label for="message">內容</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="請輸入內容"></textarea>
+
+                <br>
+
+                <!-- checkbox start 多核選 -->
+                <input class="mb-2" type="checkbox" name="newsletter" id="newsletter" checked><label
+                    for="newsletter">您是否同意訂閱電子報</label>
+                <!-- checkbox end 多核選 -->
+
+                <br>
+
+                <p class="text-right">
+                    <!-- <input class="mb-5" type="submit" value="確認送出"> -->
+
+                    <button class="btn btn-secondary mb-5" data-bs-toggle="modal" data-bs-target="#submit">確認送出</button>
+
+                <div id="submit" class="modal" tabindex="-1" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">提示</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>是否確定送出？</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                <button onclick="confirm()" type="button" class="btn btn-primary">確定</button>
+
+                                <script>
+                                    function confirm() 
+                                    {
+                                        alert(`送出成功`)
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
+
+
+            </form>
+            <!-- 表單 end -->
+        </div>
+    </div>
+
+    <!-- .container end -->
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29124.831784209262!2d120.63351452350616!3d24.150542295685458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d964fff6dc5%3A0x5d526ce61b5b9ca6!2zNDA45Y-w5Lit5biC5Y2X5bGv5Y2A5YWs55uK6Lev5LqM5q61NTHomZ8!5e0!3m2!1szh-TW!2stw!4v1709261842358!5m2!1szh-TW!2stw"
+        width="100%" height="60%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <footer>
+        <div class="container">
+            <p><a href="">
+                    網站僅供練習，不做商業用途。
+                </a>
+            </p>
+            <p><a href="">
+                    &copy; 2024 牙科診所. All rights reserved. | This website is for practice purposes only and
+                    not for commercial use.
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牙科診所 | Taiwan</title>
+
+    <!-- v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <!-- 連接CSS檔案 -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- icon掛載 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 掛載解決IE8不支援HTML5的問題 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+
+    <style>
+        body a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#"><i class="fa-solid fa-tooth icon-tooth"></i></a>
+            <a class="navbar-brand" href="./index.html" style="color:skyblue;">牙科診所</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./index.html" style="color:aliceblue;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html" style="color:aliceblue;">診療項目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html" style="color:aliceblue;">門市資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" style="color:aliceblue;">預約看診</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color:aliceblue;">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" target="_blank"><i
+                                        class="dropdown-item fa-brands fa-line icon-line"></i></a>
+                            </li>
+
+                            <li><a href="#" target="_blank"><i
+                                        class="dropdown-item fa-brands fa-facebook icon-facebook"></i></a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li><a href="#" target="_blank"><i
+                                        class="dropdown-item fa-brands fa-instagram icon-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" style="color:aliceblue;">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="float-left">
+            <a href="#" id="pagetop" ;>TOP</a>
+        </div>
+    </header>
+
+    <!-- .breadcrumb -->
+    <div class="bg-light">
+        <div class="container">
+            <ol class="breadcrumb clearfix">
+                <li class="float-left"><a href="index.html">首頁</a></li>
+                <li class="float-left">關於我們</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- .container start -->
+
+    <!-- 
+        .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
+    <div class="container clearfix position-relative">
+        <h2 class="float-left col-12">關於我們</h2>
+        <div class="float-left col-3 position-sticky" style="background-color: rgb(204, 238, 252);">
+            <!-- ul.sidebar>li*3>a[href="#"]{item$} -->
+            <ul class="sidebar">
+                <li><a class="active" href="#">關於牙科診所</a></li>
+                <li><a href="#">品牌故事</a></li>
+                <li><a href="#">歷史沿革</a></li>
+            </ul>
+        </div>
+        <div class="float-right col-9" style="background-color: none;">
+            <a href=""><img src="https://placehold.co/600x400?font=roboto" alt="" class="w-100"></a>
+            <p>
+                牙醫診所是一個致力於提供口腔健康服務的地方，為人們提供口腔治療、預防和保健等服務。我們的診所致力於提供專業、友好和全面的口腔保健服務，讓每位患者都能擁有健康美麗的笑容。
+            </p>
+            <p>
+                作為一家專業的牙醫診所，我們擁有一支經驗豐富、技術精湛的醫療團隊，包括牙科醫生、口腔衛生師和助理。他們將以專業的態度和優質的服務為您提供最佳的治療方案和解決方案。
+            </p>
+            <p>
+                我們提供的服務涵蓋了口腔健康的各個方面，包括一般牙科檢查、牙齒清潔、充填、根管治療、拔牙、牙齒矯正、美容修復、牙齒美白等。無論您是需要基本的口腔保健服務還是複雜的口腔手術，我們都能夠為您提供專業的治療。
+            </p>
+            <p>
+                除了提供優質的醫療服務外，我們的診所還注重患者的舒適和放心。我們的診所環境舒適、衛生，設備齊全、先進，我們的團隊將竭誠為您提供一流的醫療體驗。
+            </p>
+            <p>
+                無論您是需要一般牙科檢查還是進行複雜的治療，我們都將竭誠為您提供最優質的口腔保健服務。歡迎您隨時來到我們的診所，我們期待能夠為您和您的家人提供關愛、專業的口腔護理服務，讓您擁有健康、美麗的笑容。
+            </p>
+        </div>
+
+        <div class="float-right col-9" style="background-color: none;">
+            <a href=""><img src="https://placehold.co/600x400?font=roboto" alt="" class="w-100"></a>
+            <p>
+                歡迎蒞臨我們的牙醫診所，這裡是您口腔健康的全方位守護者！我們致力於提供卓越的口腔護理服務，為您和您的家人打造一個健康、自信的笑容。
+            </p>
+            <p>
+                在我們的診所，您將受益於一支優秀的醫療團隊，包括經驗豐富的牙科醫生、熱情專業的口腔衛生師，以及友善周到的助理。我們的團隊將竭盡所能，為您提供最佳的治療和建議，讓您擁有美麗、健康的牙齒。
+            </p>
+            <p>
+                無論您是需要一般的牙科檢查、牙齒清潔、根管治療還是美容修復，我們都有最先進的技術和最有效的治療方案，以確保您的口腔健康得到全面的照顧。我們致力於採用最新的醫學科技，並持續學習和更新，以確保我們的患者始終能夠享受到最先進的牙科服務。
+            </p>
+            <p>
+                在我們的牙醫診所，我們注重患者的舒適感。舒適、溫馨的診所環境，以及我們親切、細心的醫護團隊，將讓您在接受治療的同時感到放鬆和安心。
+            </p>
+            <p>
+                此外，我們提供具有競爭力的價格和靈活的預約安排，以滿足您繁忙生活的需求。我們深信，每個人都應該擁有健康、美麗的笑容，而我們的目標就是為您實現這一願望。
+            </p>
+            <p>
+                請來訪我們的牙醫診所，讓我們一同開啟您口腔健康的新旅程。期待能為您提供最優質的牙科服務，讓您擁有閃亮的笑容！
+            </p>
+        </div>
+    </div>
+    <!-- .container end -->
+
+    <a href="contact.html" class="btn-order position-fixed">預約診所</a>
+
+    <footer>
+        <div class="container">
+            <p><a href="">
+                    網站僅供練習，不做商業用途。
+                </a>
+            </p>
+            <p><a href="">
+                    &copy; 2024 牙科診所. All rights reserved. | This website is for practice purposes only and
+                    not for commercial use.
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

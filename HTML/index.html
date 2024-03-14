@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牙科診所 | Taiwan</title>
+
+    <!-- v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+    <!-- 連接CSS檔案 -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- icon掛載 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 掛載解決IE8不支援HTML5的問題 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+
+    <style>
+        body a {
+            color: black;
+        }
+
+        .carousel-item>img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+
+
+        /* CSS动画样式 */
+        @keyframes preloaderAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 预加载器样式 */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            animation: preloaderAnimation 1s infinite;
+        }
+
+        /* 预加载器中的文本样式 */
+        #preloader-text {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 预加载器 -->
+    <div id="preloader">
+        <div id="preloader-text">Loading...</div>
+    </div>
+
+    <script>
+        // 模拟页面加载
+        window.addEventListener('load', function () {
+            // 隐藏预加载器
+            document.getElementById('preloader').style.display = 'none';
+            // 显示页面内容
+            document.getElementById('content').style.display = 'block';
+        });
+    </script>
+
+    <header class="clearfix sticky-top">
+
+        <h1 class="float-left">
+            <a href="#"><i class="fa-solid fa-tooth icon-tooth"></i></a>
+            <!-- 標題連結首頁 -->
+            <a href="./index.html" style="color:skyblue;">牙科診所</a>
+        </h1>
+        <div class="float-left">
+            <a href="#" id="pagetop" ;>TOP</a>
+        </div>
+
+        <nav class="float-left">
+            <!-- ul>li*4>a{item} -->
+            <!-- 無序列表 -->
+            <ul class="clearfix">
+                <li class="float-left"><a href="about.html">關於我們</a></li>
+                <li class="float-left"><a href="product.html">診療項目</a></li>
+                <li class="float-left"><a href="store.html">門市資訊</a></li>
+                <li class="float-left"><a href="contact.html">預約看診</a></li>
+            </ul>
+        </nav>
+
+        <h2 class="socia-icon float-left">
+            <a href="#" target="_blank"><i class="fa-brands fa-line icon-line"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook icon-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram icon-instagram"></i></a>
+        </h2>
+
+    </header>
+
+
+    <!-- 旋轉木馬 start -->
+    <div id="control" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#control" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#control" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#control" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../圖片/牙科診所大圖1.jpg" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="../圖片/牙科診所大圖2.jpg" class="img-fluid">
+            </div>
+            <div class="carousel-item">
+                <img src="../圖片/牙科診所大圖3.jpg" class="img-fluid">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#control" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#control" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- 旋轉木馬 end -->
+
+    <!-- News start-->
+
+    <div class="row  container clearfix">
+        <div class="col-6">
+            <div id="control" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#control" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#control" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#control" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#control" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../圖片/最新消息1.jpg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../圖片/最新消息2.jpg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../圖片/最新消息3.jpg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../圖片/最新消息4.jpg" class="img-fluid">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#control" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#control" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row row-cols-1 sidebar">
+                <div class="col-12">
+                    <h2><a class="active" style="border-left : 8px solid rgb(43, 43, 133); font-size: 25px;">News</a>
+                    </h2>
+                </div>
+                <div class="col-12">
+                    <p><a href="">●牙齒缺損怎麼辦？常見的假牙材質大解析</a></p>
+                </div>
+                <div class="col-12">
+                    <p><a href="">●全口重建方式有好幾種，只能選擇其中一種來重建嗎？</a></p>
+                </div>
+                <div class="col-12">
+                    <p><a href="">●植牙又貴又花時間，為什麼還是一堆人選？</a></p>
+                </div>
+                <div class="col-12">
+                    <p><a href="">●牙周病也會造成缺牙？牙周治療三階段助您找回口腔健康</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row container clearfix">
+
+        <h2 class="col-12 float-left text-center">News</h2>
+
+        <div class="col-md-3 float-left">
+            <div class="position-relative">
+                <a href=""><img src="../圖片/最新消息1.jpg" class="w-100" alt=""></a>
+                <div class="tag position-absolute">牙科知識</div>
+            </div>
+            <p><a href="">牙齒缺損怎麼辦？常見的假牙材質大解析</a></p>
+        </div>
+        <div class="col-md-3 float-left">
+            <div class="position-relative">
+                <a href=""><img src="../圖片/最新消息2.jpg" class="w-100" alt=""></a>
+                <div class="tag position-absolute">牙科知識</div>
+            </div>
+            <p><a href="">全口重建方式有好幾種，只能選擇其中一種來重建嗎？</a></p>
+        </div>
+        <div class="col-md-3 float-left">
+            <div class="position-relative">
+                <div class="position-relative">
+                    <a href=""><img src="../圖片/最新消息3.jpg" class="w-100" alt=""></a>
+                    <div class="tag position-absolute">牙科知識</div>
+                </div>
+                <p><a href="">植牙又貴又花時間，為什麼還是一堆人選？</a></p>
+            </div>
+        </div>
+        <div class="col-md-3 float-left">
+            <div class="position-relative">
+
+                <div class="position-relative">
+                    <a href=""><img src="../圖片/最新消息4.jpg" class="w-100" alt=""></a>
+                    <div class="tag position-absolute">牙科知識</div>
+                </div>
+                <p><a href="">牙周病也會造成缺牙？牙周治療三階段助您找回口腔健康</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- News end -->
+
+    <!-- 設備 start -->
+    <div class="row bg-texture">
+        <div class="container clearfix">
+            <h2 class="col-12 float-left text-center">設備</h2>
+            <div class="col-md-4 float-left">
+                <div class="box-shadow" style="background-color: whitesmoke;">
+                    <img src="../圖片/設備1.jpg" class="w-100" alt="">
+                    <p class="title"><a href="">iTero 口掃機</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 float-left">
+                <div class="box-shadow" style="background-color: whitesmoke;">
+                    <img src="../圖片/設備2.jpg" class="w-100" alt="">
+                    <p class="title"><a href="">CJ OPTIK 牙科顯微鏡</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-4 float-left">
+                <div class="box-shadow" style="background-color: whitesmoke;">
+                    <img src="../圖片/設備3.jpg" class="w-100" alt="">
+                    <p class="title"><a href="">3D數位電腦斷層掃描</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 設備 end -->
+
+    <!-- 影片專區 start-->
+    <div class="container clearfix">
+        <h2 class="col-12 float-left text-center">聽牙醫怎麼說</h2>
+        <div class="col-6 float-left">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/62XfUlShH1M?si=28eSXySiQy53KhLo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="col-6 float-left">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/baLHX_a3j_Y?si=Jcz-yd20xf7KTSaG"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- 影片專區 end-->
+
+    <!-- 醫師團隊 start -->
+    <div class="clearfix">
+
+        <h2 class="col-12 float-left text-center">醫師團隊</h2>
+
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr1">
+                    <img src="../圖片/醫師0.jpg" class="w-100" alt="">
+                    <p class="title"><a>林醫師</a></p>
+                </button>
+                <div class="collapse" id="Dr1">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr1">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr1">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr1">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr1">
+                    ●高雄醫學大學牙醫學士
+                </div>
+            </div>
+
+        </div>
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr2">
+                    <img src="../圖片/醫師1.jpg" class="w-100" alt="">
+                    <p class="title"><a>黃醫師</a></p>
+                </button>
+                <div class="collapse" id="Dr2">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr2">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr2">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr2">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr2">
+                    ●高雄醫學大學牙醫學士
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr3">
+                    <img src="../圖片/醫師1.jpg" class="w-100" alt="">
+                    <p class="title"><a>李醫師</a></p>
+                </button>
+                <div class="collapse" id="Dr3">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr3">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr3">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr3">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr3">
+                    ●高雄醫學大學牙醫學士
+                </div>
+            </div>
+        </div>
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr4">
+                    <img src="../圖片/醫師1.jpg" class="w-100" alt="">
+                    <p class="title"><a>廖醫師</a></p>
+                </button>
+                <div class="collapse" id="Dr4">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr4">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr4">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr4">
+                    ●高雄醫學大學牙醫學士
+                </div>
+                <div class="collapse" id="Dr4">
+                    ●高雄醫學大學牙醫學士
+                </div>
+            </div>
+        </div>
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <div class="position-relative">
+                    <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr5">
+                        <img src="../圖片/醫師0.jpg" class="w-100" alt="">
+                        <p class="title"><a>林醫師</a></p>
+                    </button>
+                    <div class="collapse" id="Dr5">
+                        ●高雄醫學大學牙醫學士
+                    </div>
+                    <div class="collapse" id="Dr5">
+                        ●高雄醫學大學牙醫學士
+                    </div>
+                    <div class="collapse" id="Dr5">
+                        ●高雄醫學大學牙醫學士
+                    </div>
+                    <div class="collapse" id="Dr5">
+                        ●高雄醫學大學牙醫學士
+                    </div>
+                    <div class="collapse" id="Dr5">
+                        ●高雄醫學大學牙醫學士
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2 float-left">
+            <div class="position-relative">
+                <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#Dr6">
+                    <img src="../圖片/醫師1.jpg" class="w-100" alt="">
+                    <p class="title"><a href="#">鄭醫師</a></p>
+                </button>
+            </div>
+            <div class="collapse" id="Dr6">
+                ●高雄醫學大學牙醫學士
+            </div>
+            <div class="collapse" id="Dr6">
+                ●高雄醫學大學牙醫學士
+            </div>
+            <div class="collapse" id="Dr6">
+                ●高雄醫學大學牙醫學士
+            </div>
+            <div class="collapse" id="Dr6">
+                ●高雄醫學大學牙醫學士
+            </div>
+            <div class="collapse" id="Dr6">
+                ●高雄醫學大學牙醫學士
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 醫師團隊 end -->
+    <a href="contact.html" class="btn-order position-fixed">預約診所</a>
+
+    <footer>
+        <div class="container">
+            <p><a href="">
+                    網站僅供練習，不做商業用途。
+                </a>
+            </p>
+            <p><a href="">
+                    &copy; 2024 牙科診所. All rights reserved. | This website is for practice purposes only and
+                    not for commercial use.
+                </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
