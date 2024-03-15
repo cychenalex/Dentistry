@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
 
     <!-- 連接CSS檔案 -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./contact_styles.css">
 
     <!-- icon掛載 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -76,8 +76,6 @@
     </div>
 
     <!-- .container start -->
-
-
     <!-- 
         .container.clearfix>.float-left.col-3{左}+.float-left.col-9{右} -->
     <div class="container clearfix">
@@ -86,9 +84,11 @@
             <!-- ul.sidebar>li*3>a[href="#"]{item$} -->
             <ul class="sidebar">
                 <li><a class="active" href="#">聯絡表單</a></li>
-                <li><a href="#">門診資訊</a></li>
+                <li><a href="#businessHours">營業資訊</a></li>
             </ul>
         </div>
+
+
         <div class="float-left col-6">
             <!-- 表單 start -->
             <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
@@ -197,8 +197,7 @@
                                 <button onclick="confirm()" type="button" class="btn btn-primary">確定</button>
 
                                 <script>
-                                    function confirm() 
-                                    {
+                                    function confirm() {
                                         alert(`送出成功`)
                                     }
                                 </script>
@@ -208,10 +207,44 @@
                 </div>
                 </p>
 
-
             </form>
             <!-- 表單 end -->
+
         </div>
+
+        <!-- 營業資訊 start -->
+        <h2 class="float-left col-12" id="businessHours">營業資訊</h2>
+        <p class="float-left col-12">
+            牙科診所為了提供患者更舒適的療程品質，採預約制減少您的現場等候時間，提醒您就診前請先透過電話或網站預約，並於約定時間至診所完成掛號。電話預約之患者請於營業時間撥打預約專線0412345678。牙科診所牙醫之營業時間為星期一至星期五：上午09:00至晚上21:30，星期六：上午09:00至中午12:30，星期日休診。
+        </p>
+        <div class="container float-left col-12">
+            <table>
+                <tr>
+                    <th>星期一</th>
+                    <th>星期二</th>
+                    <th>星期三</th>
+                    <th>星期四</th>
+                    <th>星期五</th>
+                    <th>星期六</th>
+                    <th>星期日</th>
+                </tr>
+
+                <tr>
+                    <td>09:00-21:30</td>
+                    <td>09:00-21:30</td>
+                    <td>09:00-21:30</td>
+                    <td>09:00-21:30</td>
+                    <td>09:00-21:30</td>
+                    <td>09:00-12:30</td>
+                    <td>休診</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 營業資訊 end -->
+
+
+
     </div>
 
     <!-- .container end -->
