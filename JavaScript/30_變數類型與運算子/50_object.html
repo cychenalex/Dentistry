@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_object_definition.asp">https://www.w3schools.com/js/js_object_definition.asp</a></p>
+
+    <script>
+        // 10. 使用 {} create object；object 可以包含屬性和方法
+        //     { key1:value1, key2:value2.. }
+        var temp = { bee : "cat"};    
+        //temp是物件
+        //temp物件裡面有bee屬性
+        //bee屬性的值 是 字串cat
+
+        var score = {
+            name : "皮卡丘", 
+            chinese : 100, 
+            math : 85
+        };
+
+        console.log(score);
+
+        // 20. 透過 .  可以 取得 | 新增 object 的屬性
+        console.log(score.name);    //皮卡丘
+        console.log(score.chinese);    //100
+
+        //新增屬性
+        score.english = 50;
+        console.log(score);
+
+        //修改屬性
+        score.english = 85;
+        console.log(score);    //{name: '皮卡丘', chinese: 100, math: 85, english: 50}
+
+        // 30. 透過 [] 可以 取得 | 新增 object 的屬性
+        console.log(score["name"]);    //皮卡丘
+        score["chinese"] = 70;
+        console.log(score);    //{name: '皮卡丘', chinese: 70, math: 85, english: 85}
+        score["science"] = 60;
+        console.log(score);    //{name: '皮卡丘', chinese: 70, math: 85, english: 85, science: 60}
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 顯示效果的地方 -->
+    <p id="pSquare"></p>
+    <p id="pTriangle"></p>
+    <pre id="pTimes"></pre>
+
+    <script>
+        // 10. 使用 for 迴圈，列印出這個月份從1號到目前系統日
+        var d = new Date();
+        var mm = (d.getMonth() + 1).toString().padStart(2, '0');
+        console.log(mm);
+
+        var today = d.getDate();
+        console.log(today);
+
+        for (var i = 1; i <= today; i++) {
+            var dd = i.toString().padStart(2, '0');
+            console.log(`日期 ==> ${mm} / ${dd}`);
+        }
+
+        // 20. 使用 for 迴圈，逐一取得陣列裡面的元素
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        for (var i = 0; i < weekList.length; i++) {
+            console.log(weekList[i]);
+        }
+
+        // 30. 使用 for 迴圈，計算從 1 加到 10
+        for (var i = 0, count = 0; i <= 10; i++) {
+            count = count + i;
+            console.log(count);
+        }
+
+        // 40. 雙層迴圈 - 長方型星星 #pSquare
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // **** 
+        // ****
+
+        // 方法A. 一個迴圈
+        var temp = "";
+
+        for (var i = 0; i <= 6; i++) {
+            temp += "****<br>";
+        }
+
+        // 方法B. 兩個迴圈
+        for (var i = 1; i <= 6; i++) {
+            for (var j = 1; j <= 4; j++) {
+                temp += "*";
+            }
+            temp += "<br>";
+        }
+
+        document.getElementById("pSquare").innerHTML = temp;
+
+
+        // 50. 雙層迴圈 - 三角形 #pTriangle
+        // *
+        // **
+        // ***
+        // ****
+
+        var star = "";
+
+        for (var i = 1; i <= 4; i++) {
+            for (var j = 1; j <= i; j++) {
+                if (j <= i) {
+                    star += "*";
+                }
+            }
+            star += "<br>";
+        }
+
+        document.getElementById("pTriangle").innerHTML = star;
+
+        // 60. 列印九九乘法表 (tab為 "&#9;") + <pre> 標籤 #pTimes
+        
+        var nine = "";
+
+        for (var i = 1 ; i <= 9 ; i++)
+        {
+            for (var j = 2 ; j <= 9 ; j++)
+            {
+                nine += `${j} * ${i} = ${j * i}&#9;`;
+            }
+            nine += "<br>";
+        }
+
+        document.getElementById("pTimes").innerHTML = nine;
+
+    </script>
+</body>
+
+</html>

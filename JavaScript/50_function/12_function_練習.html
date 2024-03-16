@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+
+        // 小練習：設計一個function，傳入數量和單價
+        //        數量10杯以上總金額打95折，20杯以上打9折
+        function func(num, price)
+        {
+            var total = 0;
+            if (num >= 20)
+            {
+                total = (num * price) * 0.9;
+            }
+            else if (num >= 10)
+            {
+                total = (num * price) * 0.95;
+            }
+            else
+            {
+                total = num * price;
+            }
+            return total;
+        }
+
+        console.log(func(20, 10));
+
+
+
+
+    </script>
+</body>
+
+</html>
