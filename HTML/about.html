@@ -121,6 +121,10 @@
         function showPopup() {
             var popup = document.getElementById('popup');
             popup.style.top = '0'; // 将弹出框的 top 属性设置为 0，从而使其从上向下滑动显示
+            popup.style.display = 'block';
+            // 触发导航栏的展开
+            var navbarCollapse = document.getElementById('navbarSupportedContent');
+            navbarCollapse.classList.add('show');
         }
 
         function hidePopup() {
