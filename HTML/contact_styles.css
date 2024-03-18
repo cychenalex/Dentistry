@@ -392,7 +392,6 @@ input[type = "submit"]{
 .btn-order{
     width : 150px;
     line-height: 80px;
-    background-color:skyblue;
     right : 0;
     top : 50%;
     margin-top : -40px;
@@ -403,9 +402,9 @@ input[type = "submit"]{
     box-shadow : 0 0 4px black;
 }
 
-.btn-order:hover{
+.btn-order:hover {
     width : 180px;
-    background : lightseagreen;
+    background : rgb(255, 85, 0) !important;
     transition : all 1s;
 }
 
