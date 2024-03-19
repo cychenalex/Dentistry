@@ -71,9 +71,12 @@
         <img src="../圖片/口腔卡通圖.png" style="width:50%; margin: 0 0 0 25%; height: 90%">
         <img id="image" src="../圖片/牙刷.png" style="z-index:2; background-color: none;">
 
+
         <div class="container progress" style="height: 30px;" style="width: 1000px;">
             <div id="progress" class="progress-bar bg-warning progress-bar-striped progress-bar-animated"></div>
+            <circle id="horiball" cx="168" cy="75" r="10" fill="green"></circle>
         </div>
+
     </div>
 
     <div id="goodjob">
@@ -103,6 +106,7 @@
 
             image.addEventListener("mousedown", function () {
 
+                image.disabled = true;
                 timer = setInterval(function () {
                     count = count + 1;
                     elem.style.width = count + "px";
@@ -128,7 +132,6 @@
                 }, 1000);
             }
             else if (count < 500) {
-                var failed = document.getElementById("failed");
                 failed.style.display = "block";
                 setTimeout(function () {
                     failed.style.display = "none";
