@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+/*=============================================*/
+/*                      header                 */
+/*=============================================*/
+
 header {
     background-color: rgba(12, 109, 206, 0.875);
     padding: 5px 40px;
@@ -23,6 +27,17 @@ h1 {
 h1>a {
     color: skyblue;
     text-decoration: none;
+}
+
+.headerSideBar {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.headerSideBar a:hover {
+    background-color: rgba(12, 109, 206, 0.875);
+    border-bottom: 5px solid rgb(10, 186, 49);
 }
 
 #pagetop {
