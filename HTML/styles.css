@@ -92,7 +92,8 @@ nav>ul>li>a {
 
 .socia-icon>a>i {
     line-height: 40px;
-    margin-left: 20%;
+    font-size: 40px;
+    margin-left: 5%;
 }
 
 .icon-facebook {
@@ -148,11 +149,18 @@ footer {
     background-color: rgba(12, 109, 206, 0.875);
 }
 
-footer p {
+footer div {
     text-align: center;
 }
 
-footer p a {
+footer div ul li a i {
+    color: whitesmoke;
+}
+
+footer div ul li a {
+    color: whitesmoke;
+}
+footer div ul li {
     color: whitesmoke;
 }
 

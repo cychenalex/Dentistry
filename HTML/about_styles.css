@@ -113,9 +113,11 @@ button {
     width: 20%;
 }
 
+
 .socia-icon>a>i {
     line-height: 40px;
-    margin-left: 20%;
+    font-size: 40px;
+    margin-left: 5%;
 }
 
 .icon-facebook {
@@ -171,33 +173,20 @@ footer {
     background-color: rgba(12, 109, 206, 0.875);
 }
 
-footer p {
+footer div {
     text-align: center;
 }
 
-footer p a {
+footer div ul li a i {
     color: whitesmoke;
 }
 
-/*自訂義方塊模型*/
-/*
-header{
-    background-color : green;
-    width : 50%;    寬度
-    height : 300px;    高度
-    padding : 40px;    內邊界
-    margin : 40px;    外邊界
-    border : 5px solid black;    邊框 : 線條粗細 線條類型 顏色
+footer div ul li a {
+    color: whitesmoke;
 }
-
-footer{
-    background-color : orange;
-    width : 100px;
-    padding : 10px;    padding : 上 右 下 左;
-    margin : 10px;
-    border : 1px solid black;    邊框 : 線條粗細 線條類型 顏色
+footer div ul li {
+    color: whitesmoke;
 }
-*/
 
 /*===========================================*/
 /*                      商品                 */
