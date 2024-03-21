@@ -35,9 +35,13 @@ h1>a {
     list-style-type: none;
 }
 
+.headerSideBar a {
+    transition: 0.5s;
+}
+
 .headerSideBar a:hover {
     background-color: rgba(12, 109, 206, 0.875);
-    border-bottom: 5px solid rgb(10, 186, 49);
+    border-bottom: 5px solid rgb(94, 213, 3);
 }
 
 #pagetop {
@@ -534,7 +538,7 @@ input[type="submit"] {
     line-height: 80px;
     background-color: skyblue;
     right: 0;
-    top: 50%;
+    top: 75%;
     margin-top: -40px;
     color: white;
     text-align: center;

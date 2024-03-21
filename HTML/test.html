@@ -1,84 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Picker</title>
+  <!-- 引入Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
 <body>
+  <div class="container mt-5">
+    <label for="datepicker" class="form-label">选择日期：</label>
+    <!-- 输入日期的输入框 -->
+    <input type="date" id="datepicker" class="form-control">
+  </div>
 
-    <div class="questionWrapper">
-        <div class="question" style="display: none;">0</div>
-        <div id="game_hint">點擊下方區域將球停止，請盡量讓它們停在虛線圓環內：</div>
-        <svg id="ft_svg" width="100%" viewBox="0 0 300 150">
-            <rect x="100" y="70" width="100" height="10" fill="black"></rect>
-            <rect x="145" y="25" width="10" height="100" fill="black"></rect>
-            <text text-anchor="end" fill="beige" x="295" y="20" id="ft_text">0/20</text>
-            <circle id="horiball" cx="116" cy="75" r="10" fill="green"></circle>
-            <circle id="vertball" cx="150" cy="25" r="10" fill="green"></circle>
-            <circle id="ft_assert" cx="150" cy="75" r="20" stroke="#fff" fill="none" stroke-dasharray="2,2"
-                stroke-width="1" style="stroke: rgb(255, 255, 255);"></circle>
-        </svg>
-        <div class="answer" value="0" style="display: none;">0</div>
-    </div>
+  <!-- 引入Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
-    <script>
-        var horiBall = document.getElementById("horiball");
-        var vertBall = document.getElementById("vertball");
-        var progressText = document.getElementById("ft_text");
-        var gameHint = document.getElementById("game_hint");
+  <script>
+    // 获取日期输入框元素
+    const datePicker = document.getElementById('datepicker');
 
-        var horiPosition = 116;
-        var vertPosition = 25;
-        var maxProgress = 20;
-        var currentProgress = 0;
-        var gameRunning = true;
+    // 获取今天的日期
+    const today = new Date().toISOString().split('T')[0];
 
-        // 監聽 SVG 點擊事件
-        document.getElementById("ft_svg").addEventListener("click", function () {
-            if (gameRunning) {
-                stopBalls();
-                gameRunning = false;
-            }
-        });
-
-        function stopBalls() {
-            clearInterval(horizontalInterval);
-            clearInterval(verticalInterval);
-            checkProgress();
-        }
-
-        function moveHorizontal() {
-            horiPosition += 5; // 水平移動速度為 5 像素
-            horiBall.setAttribute("cx", horiPosition);
-        }
-
-        function moveVertical() {
-            vertPosition += 5; // 垂直移動速度為 5 像素
-            vertBall.setAttribute("cy", vertPosition);
-        }
-
-        function checkProgress() {
-            if (horiPosition >= 150 && vertPosition >= 75) {
-                currentProgress++;
-                progressText.textContent = currentProgress + "/" + maxProgress;
-                if (currentProgress >= maxProgress) {
-                    gameHint.textContent = "恭喜你完成了遊戲！";
-                } else {
-                    gameHint.textContent = "遊戲結束！";
-                }
-            } else {
-                gameHint.textContent = "遊戲結束！";
-            }
-        }
-
-        var horizontalInterval = setInterval(moveHorizontal, 100); // 每 100 毫秒移動一次水平球
-        var verticalInterval = setInterval(moveVertical, 100); // 每 100 毫秒移動一次垂直球
-
-    </script>
-
+    // 设置日期输入框的最小值为今天
+    datePicker.setAttribute('min', today);
+  </script>
 </body>
-
 </html>
