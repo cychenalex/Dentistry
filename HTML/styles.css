@@ -249,16 +249,16 @@ footer{
 }
 
 .bg-texture {
-    background-image: url('../圖片/底紋.png');
+    background-image: url('');
 }
 
 .bg-image {
-    background-image: url('../圖片/牙科診所大圖4.jpg');
+    background-image: url('../圖片/背景圖01.jpg');
     background-attachment: fixed;
-    line-height: 600px;
+    /* line-height: 300px;
     color: darkgray;
     font-size: 40px;
-    text-align: center;
+    text-align: center; */
 }
 
 .breadcrumb {
